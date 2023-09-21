@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Laboratorium2</string>
+    <string name="creator">Creator</string>
+    <string name="exit">Exit</string>
+    <string name="color_scheme">Color Scheme</string>
+    <string name="black_and_white">Black And White</string>
+    <string name="red_and_yellow">Red And Yellow</string>
+</resources>

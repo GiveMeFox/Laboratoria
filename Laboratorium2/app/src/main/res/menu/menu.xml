@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/creator"
+        android:title="@string/creator" />
+    <item
+        android:id="@+id/exit"
+        android:title="@string/exit" />
+    <item android:id="@+id/color_scheme" android:title="@string/color_scheme">
+        <menu>
+            <item
+                android:id="@+id/black_and_white"
+                android:title="@string/black_and_white" />
+            <item
+                android:id="@+id/red_and_yellow"
+                android:title="@string/red_and_yellow" />
+        </menu>
+    </item>
+</menu>
