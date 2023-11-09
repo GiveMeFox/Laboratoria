@@ -2,6 +2,8 @@ package cc.givemefox.laboratorium4
 
 import android.app.Activity
 import android.os.Bundle
+import android.os.PersistableBundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
@@ -37,7 +39,43 @@ import kotlin.math.roundToInt
 
 
 class MainActivity : ComponentActivity() {
+    override fun onStart() {
+        Toast.makeText(this, "Start", Toast.LENGTH_SHORT).show()
+        super.onStart()
+    }
+
+    override fun onResume() {
+        Toast.makeText(this, "Resume", Toast.LENGTH_SHORT).show()
+        super.onResume()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        Toast.makeText(this, "SaveInstanceState", Toast.LENGTH_SHORT).show()
+        super.onSaveInstanceState(outState, outPersistentState)
+    }
+
+    override fun onPause() {
+        Toast.makeText(this, "Pause", Toast.LENGTH_SHORT).show()
+        super.onPause()
+    }
+
+    override fun onStop() {
+        Toast.makeText(this, "Stop", Toast.LENGTH_SHORT).show()
+        super.onStop()
+    }
+
+    override fun onDestroy() {
+        Toast.makeText(this, "Destroy", Toast.LENGTH_SHORT).show()
+        super.onDestroy()
+    }
+
+    override fun onRestart() {
+        Toast.makeText(this, "Restart", Toast.LENGTH_SHORT).show()
+        super.onRestart()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        Toast.makeText(this, "Create", Toast.LENGTH_SHORT).show()
         super.onCreate(savedInstanceState)
 
         setContent {
@@ -51,6 +89,11 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+}
+
+@Composable
+fun eventsHandler() {
+
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
